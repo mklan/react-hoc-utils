@@ -1,0 +1,46 @@
+{
+  "name": "react-hoc-utils",
+  "version": "1.0.0",
+  "description": "A steady growing collection of useful higher-order components for React",
+  "author": "Matthias Klan <matthias.klan@gmail.com>",
+  "license": "MIT",
+  "repository": "github:mklan/react-hoc-utils",
+  "bugs": {
+    "url": "https://github.com/mklan/react-hoc-utils/issues"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "prepublish": "npm test",
+
+    "major": "npm version major && npm publish",
+    "minor": "npm version minor && npm publish",
+    "patch": "npm version patch && npm publish"
+  },
+  "keywords": [
+    "hoc",
+    "higher order component",
+    "react",
+    "utils",
+    "recompose"
+  ],
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sinon": "^5.0.7"
+  },
+  "dependencies": {
+    "recompose": "^0.27.0"
+  },
+  "jest": {
+    "setupFiles": [
+        "<rootDir>/__setupTests.js"
+    ]
+  }
+}
