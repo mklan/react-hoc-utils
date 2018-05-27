@@ -8,14 +8,14 @@
   "bugs": {
     "url": "https://github.com/mklan/react-hoc-utils/issues"
   },
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --verbose",
     "preversion": "npm test",
-
-    "major": "npm version major && npm publish",
-    "minor": "npm version minor && npm publish",
-    "patch": "npm version patch && npm publish"
+    "build": "parcel build src/index.js",
+    "major": "npm version major && npm run build && npm publish",
+    "minor": "npm version minor && npm run build && npm publish",
+    "patch": "npm version patch && npm run build && npm publish"
   },
   "keywords": [
     "hoc",
@@ -25,12 +25,14 @@
     "recompose"
   ],
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "^22.4.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.3",
+    "parcel-bundler": "^1.8.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
@@ -39,7 +41,7 @@
   },
   "jest": {
     "setupFiles": [
-        "<rootDir>/__setupTests.js"
+      "<rootDir>/__setupTests.js"
     ]
   }
 }
